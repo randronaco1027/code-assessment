@@ -9,3 +9,5 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+I removed the if function at line 18 to test if the input is a string. The original if function seemed to be looking for two unrelated criteria (if the input is a string vs if there is any input). Instead the input will get stringified if it is determined to exist. 

@@ -15,14 +15,12 @@ exports.deterministicPartitionKey = (event) => {
   }
 
   if (candidate) {
-    if (typeof candidate !== "string") {
-      candidate = JSON.stringify(candidate);
-    }
+    candidate = JSON.stringify(candidate);
   } else {
     candidate = TRIVIAL_PARTITION_KEY;
   }
   if (candidate.length > MAX_PARTITION_KEY_LENGTH) {
-    candidate = crypto.createHash("sha3-512").update(candidate).digest("hex");
+     candidate = crypto.createHash("sha3-512").update(candidate).digest("hex");
   }
   return candidate;
 };
