@@ -16,3 +16,18 @@ Based on the information given, break this ticket down into 2-5 individual ticke
 You will be graded on the level of detail in each ticket, the clarity of the execution plan within and between tickets, and the intelligibility of your language. You don't need to be a native English speaker, but please proof-read your work.
 
 ## Your Breakdown Here
+
+# Ticket 1: Add custom ID
+The Facilities should have the option to add custom IDs for each Agent. We will need to add a function that lets the Facilities update the agent.customId. We will need to keep the Agent's original ID under agent.Id for our own reporting purposes. We can add agent.facilityId and take the input and update each agent with the custom ID. Each agent will then have the original ID and facility given ID. 
+
+Time: under an hour
+
+# Ticket 2: Custom reports for Facilities
+When generating the reports we will need to use the Facilities ID instead of our internal ID to avoid any confusion. Because of this we will need to filter by facility for each Agent. We should agent agent.facility to each agent. This way we can generate reports for the facilities for all agents they have.
+
+Time: under an hour to add agent.facility but adding each facility to each agent could take a few hours.
+
+# Ticket 3: Generate report
+We can now generate a report for the Facilties with a filter to agent.facility = "FACILITY_NAME", agent.name, agent.facilityId, agent.hours
+
+Time: a few hours for formatting purposes
